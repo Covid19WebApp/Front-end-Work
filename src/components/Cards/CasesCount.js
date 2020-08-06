@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import { Typography } from '@material-ui/core';
 
+import { Typography,Card} from '@material-ui/core';
+import CuredCount from './CuredCount';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,32 +11,33 @@ const useStyles = makeStyles((theme) => ({
       flexWrap: 'wrap',
     '& > *': {
       marginTop: theme.spacing(2),
-      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
       width:'100%',
       height: theme.spacing(21),
       display: "flex",
-      flexDirection: "column",
-     justifyContent: "center"
+     flexDirection: "column",
+     justifyContent: "center",
+     borderBottom: '10px solid rgba(127, 85,85, 0.5)'
     },
     
   },
 }));
 
-export default function ActiveCount() {
+export default function CasesCount() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Paper elevation={2}  >
+    <div className={classes.root} >
+      <Card elevation={2} style={{backgroundColor: 'rgba(249,161,111, 0.5)'}} >
       <Typography align='center' variant="h3"   >
-         6190
+         30205
      </Typography>
      <Typography align='center' variant="h6"  >
-         Active Cases
+         Number of Cases
      </Typography>
-      </Paper>
+      </Card>
       
-      
+      <CuredCount/>
     </div>
   );
 }

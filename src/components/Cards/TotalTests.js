@@ -2,7 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { Typography } from '@material-ui/core';
-import TotalCount from './TotalTests';
+
+import Vantilator from './Vanitlator'
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,22 +24,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DeathCount() {
+export default function TestCount() {
   const classes = useStyles();
 
   return (
-      <>
+    <>
     <div className={classes.root}>
-      <Paper elevation={2}  >
+      <Paper elevation={2} style={{backgroundColor: 'rgba(111, 221, 249, 0.5)'}} >
       <Typography align='center' variant="h3"   >
          6190
      </Typography>
      <Typography align='center' variant="h6"  >
-         Official Deaths
+         Total Tests
      </Typography>
       </Paper>
-      </div>
-      <TotalCount/>
-      </>
+    </div>
+    <Vantilator/>
+    </>
   );
 }

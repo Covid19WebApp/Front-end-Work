@@ -11,6 +11,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -44,4 +45,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXVoYW1tYWRhcWliNzg2IiwiYSI6ImNrZGQwNnlpNjE3YW8ydXQ5NzBkdXUwMHUifQ.YTluye89FBzIi_C3IRaFCA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  </script>
+
 </html>

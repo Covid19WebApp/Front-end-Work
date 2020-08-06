@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core';
-import CasesCount from './CasesCount';
-import ActiveCount from './ActiveCount';
+import CasesCount from './Cards/CasesCount';
+import ActiveCount from './Cards/ActiveCount';
 import SimpleTabs from './TabsMain';
+
 
 
 
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
       textAlign: 'center',
       color: theme.palette.text.secondary,
-      height:'1000px',
+      height:'2500px',
       marginTop:'16px',
       
     },
@@ -43,7 +44,9 @@ export default function BodyGrid() {
       <Grid item xs={12} sm={3}>
         <ActiveCount/>
       </Grid>
-    </Grid>
+      
+      </Grid>
+
     
     
   </div>

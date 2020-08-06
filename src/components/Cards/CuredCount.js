@@ -9,13 +9,12 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexWrap: 'wrap',
     '& > *': {
-      marginTop: theme.spacing(0),
-      marginLeft: theme.spacing(0),
       width:'100%',
       height: theme.spacing(21),
       display: "flex",
       flexDirection: "column",
-     justifyContent: "center"
+     justifyContent: "center",
+    
     },
     
   },
@@ -27,7 +26,7 @@ export default function CuredCount() {
   return (
       <>
     <div className={classes.root}>
-      <Paper elevation={2}  >
+      <Paper elevation={2} style={{backgroundColor: 'rgba(133, 203,97, 0.5)'}}  >
       <Typography align='center' variant="h3"   >
          6190
      </Typography>

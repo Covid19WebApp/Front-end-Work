@@ -6,9 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display:'flex',
+       
         
       },
   title: {
@@ -23,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft:'5px'
 },
   logo: {
-    width: '60px',
-    height: '52px',
+    width: '70px',
+    height: '55px',
     paddingTop:"3px",
     flexShrink:0,
     textAlign: 'center',
@@ -43,6 +45,7 @@ export default function Header() {
   const classes = useStyles();
 
   return (
+    <>
     <Box className={classes.root}>
       <AppBar className={classes.AppBarColor} elevation={1} >
         <Toolbar>
@@ -55,9 +58,12 @@ export default function Header() {
           
          
        </Toolbar>
+     
        </AppBar>
-       
+      
        </Box>
+        
+        </>
   );
 }
 
